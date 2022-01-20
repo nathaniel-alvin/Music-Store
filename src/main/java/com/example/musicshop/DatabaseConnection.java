@@ -12,7 +12,11 @@ public class DatabaseConnection {
         String databaseUser = "root";
         String databasePassword = "conversation";
         String url = "jdbc:mysql://localhost:3306/" + databaseName;
-//        Class.forName("com.mysql.cj.jdbc.Driver");
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         Connection databaseLink = DriverManager.getConnection(url, databaseUser, databasePassword);
         return databaseLink;
     }

@@ -13,7 +13,7 @@
    <left>
       <AnchorPane prefHeight="600.0" prefWidth="322.0" style="-fx-background-color: #D3D3D3;" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" layoutX="41.0" layoutY="210.0" prefHeight="19.0" prefWidth="240.0" text="Movie Shop">
+            <Label alignment="CENTER" layoutX="41.0" layoutY="210.0" prefHeight="19.0" prefWidth="240.0" text="Music Shop">
                <font>
                   <Font name="Verdana Bold" size="24.0" />
                </font>
