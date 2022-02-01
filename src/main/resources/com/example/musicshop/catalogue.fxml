@@ -62,12 +62,12 @@
                   <TableColumn fx:id="descriptionCol" prefWidth="144.0" text="Description" />
               </columns>
             </TableView>
-            <Button fx:id="orderButton" layoutX="648.0" layoutY="335.0" mnemonicParsing="false" onAction="#orderButtonOnAction" prefHeight="32.0" prefWidth="130.0" text="Order" />
-            <Button fx:id="logoutButton" layoutX="648.0" layoutY="518.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="32.0" prefWidth="133.0" text="Logout" />
+            <Button fx:id="orderButton" layoutX="647.0" layoutY="430.0" mnemonicParsing="false" onAction="#orderButtonOnAction" prefHeight="32.0" prefWidth="130.0" text="Order" />
+            <Button fx:id="logoutButton" layoutX="646.0" layoutY="526.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="32.0" prefWidth="133.0" text="Logout" />
             <Label alignment="CENTER" layoutX="625.0" layoutY="256.0" prefHeight="17.0" prefWidth="173.0" text="Search:" />
             <TextField fx:id="searchTextField" layoutX="637.0" layoutY="284.0" />
-            <Button fx:id="addButton" layoutX="648.0" layoutY="424.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="130.0" text="Add" />
-            <Button fx:id="removeButton" layoutX="649.0" layoutY="472.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="131.0" text="Remove" />
+            <Button fx:id="addButton" layoutX="647.0" layoutY="342.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="130.0" text="Add" />
+            <Button fx:id="removeButton" layoutX="647.0" layoutY="387.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="131.0" text="Remove" />
             <TableView fx:id="binTableView" layoutX="521.0" layoutY="61.0" prefHeight="158.0" prefWidth="257.0">
               <columns>
                 <TableColumn fx:id="nameColBin" prefWidth="124.0" text="Name" />
@@ -95,8 +95,8 @@
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="editButton" layoutX="21.0" layoutY="25.0" mnemonicParsing="false" onAction="#editButtonOnAction" prefHeight="25.0" prefWidth="71.0" text="Profile" textFill="BLUE" underline="true" />
-            <Button fx:id="showButton" layoutX="649.0" layoutY="379.0" mnemonicParsing="false" onAction="#showButtonOnAction" prefHeight="32.0" prefWidth="130.0" text="Show Category" />
+            <Button fx:id="editButton" layoutX="21.0" layoutY="25.0" mnemonicParsing="false" onAction="#profileButtonOnAction" prefHeight="25.0" prefWidth="71.0" text="Profile" textFill="BLUE" underline="true" />
+            <Button fx:id="showButton" layoutX="647.0" layoutY="476.0" mnemonicParsing="false" onAction="#showButtonOnAction" prefHeight="32.0" prefWidth="130.0" text="Show Category" />
             <Button fx:id="showOrderButton" layoutX="679.0" layoutY="25.0" mnemonicParsing="false" onAction="#showOrderButtonOnAction" prefHeight="25.0" prefWidth="88.0" text="Show Order" textFill="BLUE" underline="true" />
          </children>
       </AnchorPane>

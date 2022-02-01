@@ -32,7 +32,7 @@ public class EditprofileController {
     public void cancelButtonOnAction(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader();
-            BorderPane root = loader.load(getClass().getResource("catalogue.fxml").openStream());
+            BorderPane root = loader.load(getClass().getResource("profileuser.fxml").openStream());
             Stage registerStage = (Stage)((Node)event.getSource()).getScene().getWindow();
 //            registerStage.initStyle(StageStyle.UNDECORATED);
             registerStage.setScene(new Scene(root, 800,600));

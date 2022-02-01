@@ -5,7 +5,6 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,7 +15,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -24,7 +22,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 
@@ -152,7 +149,7 @@ public class CatalogueController implements Initializable{
         instrumentTableView.setItems(list);
     }
 
-    public void changeToLogin(ActionEvent event) {
+    public void logoutButtonOnAction(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
             Stage registerStage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -163,10 +160,6 @@ public class CatalogueController implements Initializable{
             e.printStackTrace();
             e.getCause();
         }
-    }
-
-    public void logoutButtonOnAction(ActionEvent e) {
-        changeToLogin(e);
     }
 
     public Instrument getInstrumentBin(int index) {
@@ -237,7 +230,7 @@ public class CatalogueController implements Initializable{
         binTableView.setItems(binList);
     }
 
-    public void changeToCheckout(ActionEvent event) {
+    public void orderButtonOnAction(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader();
             BorderPane root = loader.load(getClass().getResource("checkout.fxml").openStream());
@@ -252,13 +245,10 @@ public class CatalogueController implements Initializable{
         }
     }
 
-    public void orderButtonOnAction(ActionEvent event) {
-        changeToCheckout(event);
-    }
-
-    public void editButtonOnAction(ActionEvent event) throws IOException {
+    // profile button
+    public void profileButtonOnAction(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        BorderPane root = loader.load(getClass().getResource("editprofile.fxml").openStream());
+        BorderPane root = loader.load(getClass().getResource("profileuser.fxml").openStream());
 
         Stage registerStage = (Stage)((Node)event.getSource()).getScene().getWindow();
 //            registerStage.initStyle(StageStyle.UNDECORATED);
