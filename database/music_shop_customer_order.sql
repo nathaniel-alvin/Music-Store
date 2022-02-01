@@ -32,7 +32,7 @@ CREATE TABLE `customer_order` (
   PRIMARY KEY (`id`),
   KEY `customer_order_FK` (`customer_id`),
   CONSTRAINT `customer_order_FK` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `customer_order` (
 
 LOCK TABLES `customer_order` WRITE;
 /*!40000 ALTER TABLE `customer_order` DISABLE KEYS */;
-INSERT INTO `customer_order` VALUES (1,1,'green garden','In Process',1,4380.00),(8,8,'blue','In Process',1,1100.00),(9,7,'red','In Process',1,1800.00),(11,2,'greengreen','In Process',1,350.00),(12,2,'greengreengreen','In Process',1,1550.00),(13,2,'heelo','In Process',1,1500.00),(14,2,'gggg','In Process',1,700.00),(15,2,'asdf','In Process',1,1800.00),(16,2,'','In Process',1,1100.00),(17,2,'asdfasdf','In Process',1,900.00),(18,2,'qwertqwert','In Process',1,4300.00),(19,2,'qwertsqwerts','In Process',1,1100.00),(20,2,'Not Jakarta','In Process',1,2300.00),(21,9,'sudirman, jakarta','In Process',1,4400.00),(22,11,'senayan','In Process',1,6100.00),(23,11,'senayan city','In Process',1,630.00);
+INSERT INTO `customer_order` VALUES (1,1,'green garden','In Process',1,4380.00),(8,8,'blue','In Process',1,1100.00),(9,7,'red','In Process',1,1800.00),(11,2,'greengreen','In Process',1,350.00),(12,2,'greengreengreen','In Process',1,1550.00),(13,2,'heelo','In Process',1,1500.00),(14,2,'gggg','In Process',1,700.00),(15,2,'asdf','In Process',1,1800.00),(16,2,'not jakarta','In Process',1,1100.00),(17,2,'asdfasdf','In Process',1,900.00),(18,2,'qwertqwert','In Process',1,4300.00),(19,2,'qwertsqwerts','In Process',1,1100.00),(20,2,'Not Jakarta','In Process',1,2300.00),(21,9,'sudirman, jakarta','In Process',1,4400.00),(22,11,'senayan','In Process',1,6100.00),(23,11,'senayan city','In Process',1,630.00),(24,12,'Sudirman','In Process',1,5400.00),(25,1,'Jakarta Barat','In Process',1,2098.99);
 /*!40000 ALTER TABLE `customer_order` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-20 18:04:16
+-- Dump completed on 2022-02-01 22:44:00

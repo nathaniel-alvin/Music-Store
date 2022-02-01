@@ -28,11 +28,9 @@ CREATE TABLE `customer` (
   `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `user_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `country_id` int NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `customer_FK` (`country_id`),
-  CONSTRAINT `customer_FK` FOREIGN KEY (`country_id`) REFERENCES `country` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `address` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +39,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES (1,'admin','admin@email.com','admin','admin',1),(2,'alvin','alvin@email.com','alvin','1234',1),(6,'nathan','nalvin@email.com','notalvin','12345',1),(7,'kevin','kevin@email.com','notKevin','notKevin',6),(8,'fadfad','fad@email.com','fad','1234',7),(9,'bobyy','bobyy@email.com','bobyy','1234',1),(10,'bobi','bobi@email.com','bobi','1234',11),(11,'test','test@email.com','test','1234',1);
+INSERT INTO `customer` VALUES (1,'admin','admin@email.com','admin','admin','Jakarta'),(2,'alvin','alvin@email.com','alvin','1234','Jakarta'),(6,'nathan','nalvin@email.com','notalvin','12345','Jakarta'),(7,'kevin','kevin@email.com','notKevin','notKevin','Malang'),(8,'fadfad','fad@email.com','fad','1234','Jakarta'),(9,'bobyy','bobyy@email.com','bobyy','1234','Jakarta'),(10,'bobi','bobi@email.com','bobi','1234','Surabaya'),(11,'test','test@email.com','test','1234','Jakarta'),(12,'Not Nathaniel Alvin','alvin@email.com','notnathaniel','1234','Jakarta'),(13,'newtest','newtest@email.com','newtest','12345','newtest');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-20 18:04:16
+-- Dump completed on 2022-02-01 22:43:59

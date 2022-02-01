@@ -16,27 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `country`
+-- Table structure for table `branch`
 --
 
-DROP TABLE IF EXISTS `country`;
+DROP TABLE IF EXISTS `branch`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `country` (
+CREATE TABLE `branch` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `country_name` varchar(255) NOT NULL,
+  `branch_name` varchar(100) NOT NULL,
+  `location` varchar(100) NOT NULL,
+  `number_of_employee` int NOT NULL,
+  `number_of_item` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `country`
+-- Dumping data for table `branch`
 --
 
-LOCK TABLES `country` WRITE;
-/*!40000 ALTER TABLE `country` DISABLE KEYS */;
-INSERT INTO `country` VALUES (1,'Indonesia'),(2,'United States'),(6,'Africa'),(7,'Brazil'),(8,'Belgium'),(9,'Italy'),(10,'Spain'),(11,'Malaysia');
-/*!40000 ALTER TABLE `country` ENABLE KEYS */;
+LOCK TABLES `branch` WRITE;
+/*!40000 ALTER TABLE `branch` DISABLE KEYS */;
+INSERT INTO `branch` VALUES (1,'Parai Tenggiri','Bangka Belitung',6,'7'),(2,'Nusa Dua','Bali',3,'6'),(3,'Rinjani','Lombok',3,'7'),(4,'Toba','Sumatera Utara',3,'3'),(5,'Wakatobi','Sulawesi Tenggara',4,'2');
+/*!40000 ALTER TABLE `branch` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-01 22:43:57
+-- Dump completed on 2022-02-01 22:43:59
