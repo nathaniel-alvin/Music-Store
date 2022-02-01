@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.musicshop.CreateEmployeeController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="165.0" layoutY="51.0" text="Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="165.0" layoutY="167.0" text="Address">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="171.0" layoutY="339.0" text="Role">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="163.0" layoutY="225.0" text="Date of Birth">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="167.0" layoutY="385.0" text="Branch">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="165.0" layoutY="110.0" text="Gender">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="165.0" layoutY="277.0" text="Phone number">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <VBox layoutX="308.0" layoutY="46.0" prefHeight="273.0" prefWidth="295.0" spacing="18.0">
+               <children>
+                  <TextField fx:id="nameTextfield" promptText="Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="genderTextfield" layoutX="10.0" layoutY="10.0" promptText="Gender (Male or Female)">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="addressTextfield" layoutX="10.0" layoutY="35.0" promptText="Address">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="dobTextfield" layoutX="10.0" layoutY="60.0" promptText="Date of Birth (dd-mm-yyy)">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="phoneTextfield" layoutX="10.0" layoutY="85.0" promptText="Phone number">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <CheckBox fx:id="managerCheckbox" layoutX="308.0" layoutY="339.0" mnemonicParsing="false" text="Manager">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="sellerCheckbox" layoutX="484.0" layoutY="339.0" mnemonicParsing="false" text="Seller">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+            <ComboBox fx:id="branchCombobox" layoutX="308.0" layoutY="386.0" prefHeight="25.0" prefWidth="295.0" />
+            <Button layoutX="667.0" layoutY="353.0" mnemonicParsing="false" onAction="#createButtonOnAction" text="Create">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="667.0" layoutY="419.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="51.0" prefWidth="103.0" text="Back">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Label fx:id="errorLabel" alignment="CENTER" layoutY="14.0" prefHeight="17.0" prefWidth="800.0" text="Label" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="116.0" prefWidth="800.0" style="-fx-background-color: #d6d6d6;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="250.0" layoutY="37.0" text="Create Employee">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
