@@ -1,13 +1,29 @@
 package com.example.musicshop;
 
 public class Employee {
+    private int id;
     private String name;
+    private String joinDate;
     private String address;
     private String dob;
     private String role;
-    private String gender;
-    private String phonenumber;
     private String branch;
+    private String phonenumber;
+    private String gender;
+    private String password;
+
+    public Employee(int id, String name, String joinDate, String address, String dob, String role, String branch, String phonenumber, String gender, String password) {
+        this.id = id;
+        this.name = name;
+        this.joinDate = joinDate;
+        this.address = address;
+        this.dob = dob;
+        this.role = role;
+        this.branch = branch;
+        this.phonenumber = phonenumber;
+        this.gender = gender;
+        this.password = password;
+    }
 
     public Employee(String name, String address, String dob, String role, String gender, String phonenumber, String branch) {
         this.name = name;
@@ -82,5 +98,29 @@ public class Employee {
 
     public void setBranch(String branch) {
         this.branch = branch;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getJoinDate() {
+        return joinDate;
+    }
+
+    public void setJoinDate(String joinDate) {
+        this.joinDate = joinDate;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

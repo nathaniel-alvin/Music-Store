@@ -34,7 +34,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="453.0" layoutY="358.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="171.0" text="Show Database">
+            <Button layoutX="453.0" layoutY="358.0" mnemonicParsing="false" onAction="#showManagerDatabaseButtonOnAction" prefHeight="62.0" prefWidth="171.0" text="Show Database">
                <font>
                   <Font size="18.0" />
                </font>

@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.musicshop.ManagerDatabaseController">
+   <top>
+      <AnchorPane prefHeight="116.0" prefWidth="800.0" style="-fx-background-color: #d6d6d6;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="264.0" layoutY="37.0" text="Show Database">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="789.0" prefWidth="801.0">
+               <children>
+                  <TableView fx:id="employeeTableview" layoutX="25.0" layoutY="115.0" prefHeight="226.0" prefWidth="749.0">
+                    <columns>
+                      <TableColumn fx:id="c1Tablecol" prefWidth="53.0" text="ID" />
+                      <TableColumn fx:id="c2Tablecol" prefWidth="97.0" text="Name" />
+                        <TableColumn fx:id="c3Tablecol" prefWidth="114.0" text="Address" />
+                        <TableColumn fx:id="c4Tablecol" prefWidth="101.0" text="Date of Birth" />
+                        <TableColumn fx:id="c5Tablecol" text="Gender" />
+                        <TableColumn fx:id="c6Tablecol" prefWidth="90.0" text="Phone Number" />
+                        <TableColumn fx:id="c7Tablecol" prefWidth="86.0" text="Join Date" />
+                        <TableColumn fx:id="c8Tablecol" prefWidth="106.0" text="Branch" />
+                        <TableColumn fx:id="c9Tablecol" prefWidth="96.0" text="Role" />
+                        <TableColumn fx:id="c10Tablecol" prefWidth="72.0" text="Password" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="25.0" layoutY="28.0" text="Employee Table">
+                     <font>
+                        <Font name="Verdana" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="countEmployeeLabel" layoutX="25.0" layoutY="83.0" text="Item in the table: " />
+                  <Button fx:id="backButton" layoutX="675.0" layoutY="720.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Back" />
+                  <Label layoutX="29.0" layoutY="370.0" text="Branch Table">
+                     <font>
+                        <Font name="Verdana" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="countBranchLabel" layoutX="29.0" layoutY="427.0" text="Item in the table: " />
+                  <TableView fx:id="branchTableview" layoutX="25.0" layoutY="458.0" prefHeight="241.0" prefWidth="751.0">
+                    <columns>
+                      <TableColumn fx:id="idBranchTablecol" prefWidth="57.666664123535156" text="ID" />
+                      <TableColumn fx:id="nameBranchTablecol" prefWidth="114.33334350585938" text="Name" />
+                        <TableColumn fx:id="locationBranchTablecol" prefWidth="116.66665649414062" text="Location" />
+                        <TableColumn fx:id="employeeNumberBranchTablecol" minWidth="4.333343505859375" prefWidth="146.66665649414062" text="Number of Employees" />
+                        <TableColumn fx:id="itemNumberBranchTablecol" prefWidth="138.66668701171875" text="Number of Items" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

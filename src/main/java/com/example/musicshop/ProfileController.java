@@ -86,6 +86,19 @@ public class ProfileController implements Initializable {
         }
     }
 
+    public void showManagerDatabaseButtonOnAction(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("managerdatabase.fxml"));
+            Stage registerStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+//            registerStage.initStyle(StageStyle.UNDECORATED);
+            registerStage.setScene(new Scene(root, 800,600));
+            registerStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Singleton holder = Singleton.getInstance();
